@@ -6451,8 +6451,8 @@ const baseURL = `https://${jira_domain}.atlassian.net/browse/`;
 issues.forEach((issue) => {
   const key = issue.key;
   const url = baseURL + key;
-  const issueTypeName = issue.field.issueType.name;
-  const summary = issue.field.summary;
+  const issueTypeName = issue.fields.issuetype.name;
+  const summary = issue.fields.summary;
 
   const ticketInfo = `[${issueTypeName}] - [${key}](${url}) ${summary}
   `;
