@@ -6443,9 +6443,11 @@ if (!Array.isArray(issues)) {
   throw new Error("typeof issues is not Array");
 }
 
-let content = `# Release notes - ${projectKey} - Version ${version}
+let content = `**Release notes - ${projectKey} - Version ${version}**
 
+## Jira Tickets
 `;
+
 const baseURL = `https://${jira_domain}.atlassian.net/browse/`;
 
 issues.forEach((issue) => {
@@ -6454,7 +6456,7 @@ issues.forEach((issue) => {
   const issueTypeName = issue.fields.issuetype.name;
   const summary = issue.fields.summary;
 
-  const ticketInfo = `[${issueTypeName}] - [${key}](${url}) ${summary}
+  const ticketInfo = `- [${issueTypeName}] - [${key}](${url}) ${summary}
   `;
   content += ticketInfo;
 });
