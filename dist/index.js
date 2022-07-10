@@ -6457,7 +6457,7 @@ issues.forEach((issue) => {
   const summary = issue.fields.summary;
 
   const ticketInfo = `- [${issueTypeName}] - [${key}](${url}) ${summary}
-  `;
+`;
   content += ticketInfo;
 });
 
