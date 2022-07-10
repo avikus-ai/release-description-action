@@ -2,14 +2,17 @@ name: "make github release description"
 description: "make github release description"
 
 inputs:
-  pull_number:
-    description: "pull number to get description"
+  version:
+    description: "jira version"
     required: true
-  owner:
-    description: "project owner"
+  projectKey:
+    description: "jira project"
     required: true
-  repository:
-    description: "repository name"
+  jira_token:
+    description: "jira auth token"
+    required: true
+  jira_domain:
+    description: "jira domain"
     required: true
 
 outputs:

@@ -19,6 +19,8 @@
   "homepage": "https://github.com/avikus-ai/release-description-action#readme",
   "dependencies": {
     "@actions/core": "^1.9.0",
-    "@octokit/rest": "^19.0.3"
-  }
+    "@octokit/rest": "^19.0.3",
+    "node-fetch": "^3.2.6"
+  },
+  "type": "module"
 }
