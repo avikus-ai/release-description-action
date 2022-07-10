@@ -6416,7 +6416,9 @@ __nccwpck_require__.a(__webpack_module__, async (__webpack_handle_async_dependen
 
 
 const version = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput("version");
-const projectKey = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput("project");
+const projectKey = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput("projectKey");
+const jira_token = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput("jira_token");
+const jira_domain = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput("jira_domain");
 
 async function getReleatedIssues() {
   const response = await (0,node_fetch__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .ZP)(
