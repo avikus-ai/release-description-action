@@ -1,0 +1,21 @@
+name: "make github release description"
+description: "make github release description"
+
+inputs:
+  pull_number:
+    description: "pull number to get description"
+    required: true
+  owner:
+    description: "project owner"
+    required: true
+  repository:
+    description: "repository name"
+    required: true
+
+outputs:
+  content:
+    description: "release description"
+
+runs:
+  using: "node16"
+  main: "index.js"
