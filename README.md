@@ -10,9 +10,10 @@ Create a workflow `.yml` file in your `.github/workflows` directory. An [example
 
 ### Inputs
 
-- `pull_number`: The number of pull for fetching description.
-- `owner`: The name of project owner.
-- `repository`: The name of github project repository.
+- `version`: The name of Jira version.
+- `projectKey`: The key of Jira project.
+- `jira_token`: The token of Jira.
+- `jira_domain`: The name of Jira domain.
 
 ### Outputs
 
@@ -45,6 +46,14 @@ jobs:
           pull_number: "pull number"
           owner: "project owner"
           repository: "repository name"
+      - name: release description
+        id: release_description
+        uses: avikus-ai/release-description-action@v0.0.1
+        with:
+          version: "jira version name"
+          projectKey: "jira project key"
+          jira_token: "jira token"
+          jira_domain: "jira domain"
 ```
 
 ## License
